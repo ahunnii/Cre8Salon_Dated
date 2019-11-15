@@ -1,6 +1,6 @@
 import React from 'react';
 import { Parallax } from 'react-parallax';
-import image1 from '../@images/sign.jpg';
+import image1 from '@images/sign.jpg';
 const Par = () => (
   <div>
     <Parallax bgImage={image1} strength={300}>

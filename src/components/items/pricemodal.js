@@ -5,8 +5,8 @@ import styled from 'styled-components';
 
 // include styles
 import 'rodal/lib/rodal.css';
-import Button from '../@styles/Button';
-import { theme } from '../@styles';
+import Button from '@styles/Button';
+import { theme } from '@styles';
 
 const Contain = styled.ul`
   content: none;
