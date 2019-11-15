@@ -1,11 +1,11 @@
+/* eslint-disable no-unused-vars */
 import React, { Component } from 'react';
 import { CSSTransition, TransitionGroup } from 'react-transition-group';
 
-import { socialMedia } from '../config';
-
+import { socialMedia } from '@config';
 
 import styled from 'styled-components';
-import { theme, media } from '../styles';
+import { theme, media } from '@styles';
 
 const SocialContainer = styled.div`
   width: 40px;
@@ -34,13 +34,6 @@ const SocialItem = styled.li`
     margin-bottom: 20px;
   }
 `;
-const SocialLink = styled.a`
-  padding: 10px;
-  svg {
-    width: 18px;
-    height: 18px;
-  }
-`;
 
 class Social extends Component {
   state = {
@@ -61,10 +54,7 @@ class Social extends Component {
             <CSSTransition timeout={3000} classNames="fade">
               <SocialItemList>
                 {socialMedia &&
-                  socialMedia.map(({ url, name }, i) => (
-                    <SocialItem key={i}>
-                    </SocialItem>
-                  ))}
+                  socialMedia.map(({ url, name }, i) => <SocialItem key={i}></SocialItem>)}
               </SocialItemList>
             </CSSTransition>
           )}

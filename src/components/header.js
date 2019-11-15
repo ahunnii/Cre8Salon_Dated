@@ -4,18 +4,15 @@ import { CSSTransition, TransitionGroup } from 'react-transition-group';
 import PropTypes from 'prop-types';
 import AnchorLink from 'react-anchor-link-smooth-scroll';
 import { Link } from 'gatsby';
-import { throttle } from '../utils';
+import { throttle } from '@utils';
 
-import { headerHeight } from '../config';
+import { headerHeight } from '@config';
 
-
-import Menu from '../components/menu';
+import Menu from '@components/menu';
 import { IconLogo } from './icons';
 
-
-
 import styled from 'styled-components';
-import { theme, mixins, media, Nav } from '../styles';
+import { theme, mixins, media, Nav } from '@styles';
 
 const HeaderContainer = styled.header`
   ${mixins.flexBetween};
@@ -41,33 +38,29 @@ const HeaderContainer = styled.header`
   ${media.tablet`padding: 0 25px;`};
   ${media.phablet`padding: 0 15px;`};
   ${media.phone`padding: 0 5px;`};
-
-
 `;
 const Navbar = styled(Nav)`
   ${mixins.flexBetween};
   font-family: ${theme.fonts.Montserrat};
-  font-weight:500;
+  font-weight: 500;
 
   color: ${theme.colors.backgroundGrey};
   counter-reset: item 0;
   position: relative;
   z-index: 12;
-
 `;
 const Logo = styled.div`
   ${mixins.flexCenter};
   opacity: 1;
-  width:400px;
+  width: 400px;
   ${media.desktop`width:300px; height:80%;`};
   ${media.tablet`width:350px; height:80%;`};
   ${media.phablet`width:300px; height:80%;`};
-
 `;
 const LogoLink = styled(Link)`
   color: ${theme.colors.lightRed};
-  width:400px;
-  height:auto;
+  width: 400px;
+  height: auto;
   &:hover,
   &:focus {
     svg {
@@ -82,7 +75,6 @@ const LogoLink = styled(Link)`
   ${media.desktop`width:300px;`};
   ${media.tablet`width:350px;`};
   ${media.phablet`width:300px;`};
-
 `;
 
 const Hamburger = styled.div`
@@ -171,7 +163,7 @@ const NavLink = styled(AnchorLink)`
   padding: 12px 10px;
 `;
 const ResumeButton = styled.div`
-  display:none;
+  display: none;
 `;
 const ResumeLink = styled.a`
   ${mixins.smallButton};
@@ -319,7 +311,7 @@ class Header extends Component {
               {isMounted && (
                 <CSSTransition classNames="fadedown" timeout={3000}>
                   <ResumeButton style={{ transitionDelay: `600ms` }}>
-                    <ResumeLink  target="_blank" rel="nofollow noopener noreferrer">
+                    <ResumeLink target="_blank" rel="nofollow noopener noreferrer">
                       Resume
                     </ResumeLink>
                   </ResumeButton>

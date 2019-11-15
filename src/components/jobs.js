@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
-import { srConfig } from '../config';
+import { srConfig } from '@config';
 
 import styled from 'styled-components';
-import { theme, mixins, media, Section, Heading } from '../styles';
+import { theme, mixins, media, Section, Heading } from '@styles';
 
-import ScrollReveal from 'scrollreveal';
+import sr from '@utils/sr';
 
 const JobsContainer = styled(Section)`
   position: relative;
@@ -157,7 +157,7 @@ class Jobs extends Component {
   };
 
   componentDidMount() {
-    ScrollReveal().reveal(this.jobs, srConfig());
+    sr.reveal(this.jobs, srConfig());
   }
 
   isActive = id => this.state.activeTabId === id;

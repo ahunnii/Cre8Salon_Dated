@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/alt-text */
 import React, { Component } from 'react';
 import Helmet from 'react-helmet';
 import PropTypes from 'prop-types';
@@ -5,26 +6,8 @@ import PropTypes from 'prop-types';
 import anime from 'animejs';
 
 import styled from 'styled-components';
-import { theme, mixins, Heading,media} from '../styles';
-import Cre8 from '../images/logo.jpg';
-
-const LoaderHeading = styled(Heading)`
-font-size:8vw;
-${media.tablet`font-size:10vw;`};
-
-text-align:center;
-font-weight:600;
-white-space: nowrap;
-color:${theme.colors.actualWhite};
-
-span{
-  font-size:13vw;
-  ${media.tablet`font-size:15vw;`};
-  color:${theme.colors.darkestGrey};
-
-}
-
-`;
+import { theme, mixins } from '@styles';
+import Cre8 from '@images/logo.jpg';
 
 const LoaderContainer = styled.div`
   ${mixins.flexCenter};
@@ -44,7 +27,11 @@ const LogoWrapper = styled.div`
   transition: ${theme.transition};
   opacity: ${props => (props.isMounted ? 1 : 0)};
 
-  img, p, strong, hr, h1{
+  img,
+  p,
+  strong,
+  hr,
+  h1 {
     width: 100vw;
     height: 100%;
     display: block;
@@ -52,23 +39,21 @@ const LogoWrapper = styled.div`
     fill: none;
     user-select: none;
 
-      opacity: 0;
-
-
+    opacity: 0;
   }
-  p, strong{
-    color:white;
-    font-size:25px;
-    text-align:center;
-
+  p,
+  strong {
+    color: white;
+    font-size: 25px;
+    text-align: center;
   }
 
-  hr{
-    border:none;
-    height:3px;
-    background:white;
-    margin-top:0px;
-    margin-bottom:5px;
+  hr {
+    border: none;
+    height: 3px;
+    background: white;
+    margin-top: 0px;
+    margin-bottom: 5px;
   }
 `;
 
@@ -110,7 +95,6 @@ class Loader extends Component {
         scale: 0.1,
       })
 
-
       .add({
         targets: '.loader',
         duration: 200,
@@ -129,9 +113,8 @@ class Loader extends Component {
           <body className={isMounted ? 'hidden' : ''} />
         </Helmet>
         <LogoWrapper isMounted={isMounted}>
-          <img id="logo" src={Cre8}/>
-           </LogoWrapper>
-
+          <img id="logo" src={Cre8} />
+        </LogoWrapper>
       </LoaderContainer>
     );
   }

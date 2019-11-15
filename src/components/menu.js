@@ -2,10 +2,8 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import AnchorLink from 'react-anchor-link-smooth-scroll';
 
-
-
 import styled from 'styled-components';
-import { theme, mixins, media, Nav } from '../styles';
+import { theme, mixins, media, Nav } from '@styles';
 
 const MenuContainer = styled.div`
   position: fixed;
@@ -49,7 +47,7 @@ const NavList = styled.ol`
 const NavListItem = styled.li`
   margin: 0 auto 20px;
   position: relative;
-  color:${theme.colors.black};
+  color: ${theme.colors.black};
   font-size: ${theme.fontSizes.large};
   counter-increment: item 1;
 
@@ -60,18 +58,11 @@ const NavListItem = styled.li`
   ${media.tiny`
     font-size: ${theme.fontSizes.smallish};
   `};
-
 `;
 const NavLink = styled(AnchorLink)`
   ${mixins.link};
   padding: 3px 20px 20px;
   width: 100%;
-`;
-const ResumeLink = styled.a`
-  ${mixins.bigButton};
-  padding: 18px 50px;
-  margin: 10% auto 0;
-  width: max-content;
 `;
 
 class Menu extends Component {

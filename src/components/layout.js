@@ -2,18 +2,17 @@ import React, { Component } from 'react';
 import { StaticQuery, graphql } from 'gatsby';
 import PropTypes from 'prop-types';
 
-import Head from '../components/head';
-import Loader from '../components/loader';
-import Header from '../components/header';
-//import Social from '../components/social';
-//import Email from '../components/email';
-import Footer from '../components/footer';
+import Head from '@components/head';
+import Loader from '@components/loader';
+import Header from '@components/header';
+//import Social from '@components/social';
+//import Email from '@components/email';
+import Footer from '@components/footer';
 
-
-import { nav } from '../config';
+import { nav } from '@config';
 
 import styled from 'styled-components';
-import { GlobalStyle, theme } from '../styles';
+import { GlobalStyle, theme } from '@styles';
 
 const SkipToContent = styled.a`
   position: absolute;
@@ -90,7 +89,6 @@ class Layout extends Component {
             ) : (
               <div className="container">
                 <Header location={location} navLinks={nav} />
-
 
                 {children}
                 <Footer />

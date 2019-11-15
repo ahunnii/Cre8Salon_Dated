@@ -2,35 +2,29 @@ import React from 'react';
 import { graphql } from 'gatsby';
 import PropTypes from 'prop-types';
 
-import Layout from '../components/layout';
-import Blurb from '../components/blurb';
+import Layout from '@components/layout';
+import Blurb from '@components/blurb';
 
-// import About from '../components/about';
-import Stylists from '../components/stylists';
-import Contact from '../components/contact';
-import Services from '../components/services';
+// import About from '@components/about';
+import Stylists from '@components/stylists';
+import Contact from '@components/contact';
+import Services from '@components/services';
 import styled from 'styled-components';
-import { media, mixins, Main,theme } from '../styles';
-
+import { mixins, Main } from '@styles';
 
 const MainContainer = styled(Main)`
   ${mixins.sidePadding};
   counter-reset: section;
-
 `;
 const Border = styled.hr`
-
-  width:85vw;
+  width: 85vw;
   overflow: visible; /* For IE */
   padding: 0;
   border: none;
   border-top: medium double #333;
   color: #333;
   text-align: center;
-
-
 `;
-
 
 const IndexPage = ({ data, location }) => (
   <Layout location={location}>
@@ -44,7 +38,6 @@ const IndexPage = ({ data, location }) => (
       {/* <About data={data.about.edges} /> */}
       {/* <Border></Border> */}
       <Contact data={data.contact.edges} />
-
     </MainContainer>
   </Layout>
 );
@@ -86,7 +79,7 @@ export const query = graphql`
     }
     stylists: allMarkdownRemark(
       filter: { fileAbsolutePath: { regex: "/stylists/" } }
-      sort: { fields: [frontmatter___id], order: ASC}
+      sort: { fields: [frontmatter___id], order: ASC }
     ) {
       edges {
         node {
@@ -94,7 +87,7 @@ export const query = graphql`
             title
             avatar {
               childImageSharp {
-                fluid( quality: 100) {
+                fluid(quality: 100) {
                   ...GatsbyImageSharpFluid_withWebp
                 }
               }

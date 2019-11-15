@@ -1,35 +1,30 @@
+/* eslint-disable jsx-a11y/iframe-has-title */
 import React, { Component } from 'react';
-import PropTypes from 'prop-types';
-import AnchorLink from 'react-anchor-link-smooth-scroll';
-
-
 
 import styled from 'styled-components';
-import { theme, mixins, media, Nav } from '../styles';
+import { media } from '@styles';
 import Spinner from 'react-spinkit';
 
 const Wrapper = styled.div`
-  iframe{
+  iframe {
     ${media.tablet`height:500px; `};
   }
-
-
 `;
 class MapRender extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      loading: true
+      loading: true,
     };
   }
 
-hideSpinner = () => {
+  hideSpinner = () => {
     this.setState({
-      loading: false
+      loading: false,
     });
   };
 
-render() {
+  render() {
     return (
       <Wrapper className="container rsvp-wrapper">
         {this.state.loading ? (

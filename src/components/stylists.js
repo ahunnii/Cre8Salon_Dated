@@ -1,23 +1,22 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { CSSTransition, TransitionGroup } from 'react-transition-group';
-import { srConfig } from '../config';
+import { srConfig } from '@config';
 import styled from 'styled-components';
-import { theme, mixins, media, Section, Button, Heading} from '../styles';
-import ScrollReveal from 'scrollreveal';
+import { theme, mixins, media, Section, Heading } from '@styles';
+import sr from '@utils/sr';
 
-import Team from '../images/team.jpg';
 import Img from 'gatsby-image';
 
 const ProjectsContainer = styled(Section)`
   ${mixins.flexCenter};
   flex-direction: column;
   align-items: flex-start;
-  p{
-    line-height:1.5;
-    font-family:${theme.fonts.Montserrat};
-    margin-top:35px;
-    margin-bottom:30px;
+  p {
+    line-height: 1.5;
+    font-family: ${theme.fonts.Montserrat};
+    margin-top: 35px;
+    margin-bottom: 30px;
   }
 `;
 const ProjectsGrid = styled.div`
@@ -41,37 +40,36 @@ const ProjectInner = styled.div`
 `;
 const Project = styled.div`
   transition: ${theme.transition};
-
 `;
 
-const ProjectTop = styled.div`padding:25px;margin-bottom:auto`;
-
+const ProjectTop = styled.div`
+  padding: 25px;
+  margin-bottom: auto;
+`;
 
 const ProjectName = styled.h5`
-
   font-size: ${theme.fontSizes.xlarge};
   color: ${theme.colors.backgroundGrey};
-  font-family:${theme.fonts.Montserrat};
-  text-transform:uppercase;
+  font-family: ${theme.fonts.Montserrat};
+  text-transform: uppercase;
 `;
 const ProjectSub = styled.h6`
-
   font-size: ${theme.fontSizes.small};
   color: ${theme.colors.backgroundGrey};
-  font-family:${theme.fonts.Montserrat};
-  text-transform:uppercase;
-  margin-top:0px;
-  padding-top:0px;
+  font-family: ${theme.fonts.Montserrat};
+  text-transform: uppercase;
+  margin-top: 0px;
+  padding-top: 0px;
 `;
 
 const ProjectDescription = styled.div`
   font-size: 15px;
   line-height: 1.5;
-  font-family:${theme.fonts.Montserrat};
-  height:100%;
-  margin:5px auto;
-  p{
-    color:white;
+  font-family: ${theme.fonts.Montserrat};
+  height: 100%;
+  margin: 5px auto;
+  p {
+    color: white;
   }
 `;
 
@@ -80,8 +78,6 @@ const FeaturedImg = styled(Img)`
   max-width: 100%;
   height: 500px;
 `;
-
-
 
 class Stylists extends Component {
   static propTypes = {
@@ -99,8 +95,8 @@ class Stylists extends Component {
   };
 
   componentDidMount() {
-    ScrollReveal().reveal(this.stylists, srConfig());
-    this.revealRefs.forEach((ref, i) => ScrollReveal().reveal(ref, srConfig(i * 100)));
+    sr.reveal(this.stylists, srConfig());
+    this.revealRefs.forEach((ref, i) => sr.reveal(ref, srConfig(i * 100)));
   }
 
   showMoreToggle = () => this.setState({ showMore: !this.state.showMore });
@@ -114,16 +110,12 @@ class Stylists extends Component {
     const projectsToShow = showMore ? projects : firstSix;
 
     return (
+      <ProjectsContainer>
+        <span id="stylists" ref={el => (this.stylists = el)}></span>
 
+        <Heading>Meet Our Staff</Heading>
 
-
-      <ProjectsContainer >
-      <span id="stylists" ref={el => (this.stylists = el)}></span>
-
-
-<Heading >Meet Our Staff</Heading>
-
-      <p>&nbsp;</p>
+        <p>&nbsp;</p>
         <ProjectsGrid>
           <TransitionGroup className="projects">
             {projectsToShow &&
@@ -141,18 +133,15 @@ class Stylists extends Component {
                       ref={el => (this.revealRefs[i] = el)}
                       style={{
                         transitionDelay: `${i >= GRID_LIMIT ? (i - GRID_LIMIT) * 100 : 0}ms`,
-
                       }}>
-
                       <ProjectInner>
-                        <FeaturedImg fluid={avatar.childImageSharp.fluid}/>
+                        <FeaturedImg fluid={avatar.childImageSharp.fluid} />
 
                         <ProjectTop>
                           <ProjectName>{title}</ProjectName>
                           <ProjectSub>{external}</ProjectSub>
                           <ProjectDescription dangerouslySetInnerHTML={{ __html: html }} />
                         </ProjectTop>
-
                       </ProjectInner>
                     </Project>
                   </CSSTransition>
@@ -160,10 +149,7 @@ class Stylists extends Component {
               })}
           </TransitionGroup>
         </ProjectsGrid>
-
-
       </ProjectsContainer>
-
     );
   }
 }

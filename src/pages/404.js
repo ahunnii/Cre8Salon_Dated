@@ -1,10 +1,10 @@
 import React from 'react';
 import { Link } from 'gatsby';
 
-import Layout from '../components/layout';
+import Layout from '@components/layout';
 
 import styled from 'styled-components';
-import { theme, mixins, media, Main } from '../styles';
+import { theme, mixins, media, Main } from '@styles';
 
 const MainContainer = styled(Main)`
   ${mixins.flexCenter};
@@ -32,8 +32,8 @@ const Subtitle = styled.h2`
 const HomeButton = styled(Link)`
   ${mixins.bigButton};
   margin-top: 40px;
-  color:${theme.colors.lightRed};
-  background:white;
+  color: ${theme.colors.lightRed};
+  background: white;
 `;
 
 const NotFoundPage = () => (

@@ -1,15 +1,15 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import { srConfig} from '../config';
+import { srConfig } from '@config';
 import styled from 'styled-components';
-import { theme, Section, Heading } from '../styles';
-import ScrollReveal from 'scrollreveal';
+import { theme, Section, Heading } from '@styles';
+import sr from '@utils/sr';
 
 const AboutContainer = styled(Section)`
-  p{
-    line-height:1.5;
-    font-family:${theme.fonts.Montserrat};
-    margin-top:35px;
+  p {
+    line-height: 1.5;
+    font-family: ${theme.fonts.Montserrat};
+    margin-top: 35px;
   }
 `;
 
@@ -19,7 +19,7 @@ class About extends Component {
   };
 
   componentDidMount() {
-    ScrollReveal().reveal(this.about, srConfig());
+    sr.reveal(this.about, srConfig());
   }
 
   render() {
@@ -28,10 +28,10 @@ class About extends Component {
     const { title } = frontmatter;
 
     return (
-        <AboutContainer id="about" ref={el => (this.about = el)}>
-          <Heading >{title}</Heading>
-          <p dangerouslySetInnerHTML={{ __html: html }} />
-        </AboutContainer>
+      <AboutContainer id="about" ref={el => (this.about = el)}>
+        <Heading>{title}</Heading>
+        <p dangerouslySetInnerHTML={{ __html: html }} />
+      </AboutContainer>
     );
   }
 }
