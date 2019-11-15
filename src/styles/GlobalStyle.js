@@ -3,7 +3,6 @@ import theme from './theme';
 import media from './media';
 import * as fonts from './fonts';
 
-
 const GlobalStyle = createGlobalStyle`
 @font-face {
   font-family: 'Raleway';
