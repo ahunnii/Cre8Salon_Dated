@@ -1,110 +1,106 @@
-import CalibreLightTTF from '../fonts/Calibre/Calibre-Light.ttf';
-import CalibreLightWOFF from '../fonts/Calibre/Calibre-Light.woff';
-import CalibreLightWOFF2 from '../fonts/Calibre/Calibre-Light.woff2';
-import CalibreLightItalicTTF from '../fonts/Calibre/Calibre-LightItalic.ttf';
-import CalibreLightItalicWOFF from '../fonts/Calibre/Calibre-LightItalic.woff';
-import CalibreLightItalicWOFF2 from '../fonts/Calibre/Calibre-LightItalic.woff2';
-import CalibreRegularTTF from '../fonts/Calibre/Calibre-Regular.ttf';
-import CalibreRegularWOFF from '../fonts/Calibre/Calibre-Regular.woff';
-import CalibreRegularWOFF2 from '../fonts/Calibre/Calibre-Regular.woff2';
-import CalibreRegularItalicTTF from '../fonts/Calibre/Calibre-RegularItalic.ttf';
-import CalibreRegularItalicWOFF from '../fonts/Calibre/Calibre-RegularItalic.woff';
-import CalibreRegularItalicWOFF2 from '../fonts/Calibre/Calibre-RegularItalic.woff2';
-import CalibreMediumTTF from '../fonts/Calibre/Calibre-Medium.ttf';
-import CalibreMediumWOFF from '../fonts/Calibre/Calibre-Medium.woff';
-import CalibreMediumWOFF2 from '../fonts/Calibre/Calibre-Medium.woff2';
-import CalibreMediumItalicTTF from '../fonts/Calibre/Calibre-MediumItalic.ttf';
-import CalibreMediumItalicWOFF from '../fonts/Calibre/Calibre-MediumItalic.woff';
-import CalibreMediumItalicWOFF2 from '../fonts/Calibre/Calibre-MediumItalic.woff2';
-import CalibreSemiboldTTF from '../fonts/Calibre/Calibre-Semibold.ttf';
-import CalibreSemiboldWOFF from '../fonts/Calibre/Calibre-Semibold.woff';
-import CalibreSemiboldWOFF2 from '../fonts/Calibre/Calibre-Semibold.woff2';
-import CalibreSemiboldItalicTTF from '../fonts/Calibre/Calibre-SemiboldItalic.ttf';
-import CalibreSemiboldItalicWOFF from '../fonts/Calibre/Calibre-SemiboldItalic.woff';
-import CalibreSemiboldItalicWOFF2 from '../fonts/Calibre/Calibre-SemiboldItalic.woff2';
+import CalibreLightTTF from '../fonts/calibre/Calibre-Light.ttf';
+import CalibreLightWOFF from '../fonts/calibre/Calibre-Light.woff';
+import CalibreLightWOFF2 from '../fonts/calibre/Calibre-Light.woff2';
+import CalibreLightItalicTTF from '../fonts/calibre/Calibre-LightItalic.ttf';
+import CalibreLightItalicWOFF from '../fonts/calibre/Calibre-LightItalic.woff';
+import CalibreLightItalicWOFF2 from '../fonts/calibre/Calibre-LightItalic.woff2';
+import CalibreRegularTTF from '../fonts/calibre/Calibre-Regular.ttf';
+import CalibreRegularWOFF from '../fonts/calibre/Calibre-Regular.woff';
+import CalibreRegularWOFF2 from '../fonts/calibre/Calibre-Regular.woff2';
+import CalibreRegularItalicTTF from '../fonts/calibre/Calibre-RegularItalic.ttf';
+import CalibreRegularItalicWOFF from '../fonts/calibre/Calibre-RegularItalic.woff';
+import CalibreRegularItalicWOFF2 from '../fonts/calibre/Calibre-RegularItalic.woff2';
+import CalibreMediumTTF from '../fonts/calibre/Calibre-Medium.ttf';
+import CalibreMediumWOFF from '../fonts/calibre/Calibre-Medium.woff';
+import CalibreMediumWOFF2 from '../fonts/calibre/Calibre-Medium.woff2';
+import CalibreMediumItalicTTF from '../fonts/calibre/Calibre-MediumItalic.ttf';
+import CalibreMediumItalicWOFF from '../fonts/calibre/Calibre-MediumItalic.woff';
+import CalibreMediumItalicWOFF2 from '../fonts/calibre/Calibre-MediumItalic.woff2';
+import CalibreSemiboldTTF from '../fonts/calibre/Calibre-Semibold.ttf';
+import CalibreSemiboldWOFF from '../fonts/calibre/Calibre-Semibold.woff';
+import CalibreSemiboldWOFF2 from '../fonts/calibre/Calibre-Semibold.woff2';
+import CalibreSemiboldItalicTTF from '../fonts/calibre/Calibre-SemiboldItalic.ttf';
+import CalibreSemiboldItalicWOFF from '../fonts/calibre/Calibre-SemiboldItalic.woff';
+import CalibreSemiboldItalicWOFF2 from '../fonts/calibre/Calibre-SemiboldItalic.woff2';
 
-import SFMonoRegularTTF from '../fonts/SFMono/SFMono-Regular.ttf';
-import SFMonoRegularWOFF from '../fonts/SFMono/SFMono-Regular.woff';
-import SFMonoRegularWOFF2 from '../fonts/SFMono/SFMono-Regular.woff2';
-import SFMonoRegularItalicTTF from '../fonts/SFMono/SFMono-RegularItalic.ttf';
-import SFMonoRegularItalicWOFF from '../fonts/SFMono/SFMono-RegularItalic.woff';
-import SFMonoRegularItalicWOFF2 from '../fonts/SFMono/SFMono-RegularItalic.woff2';
-import SFMonoMediumTTF from '../fonts/SFMono/SFMono-Medium.ttf';
-import SFMonoMediumWOFF from '../fonts/SFMono/SFMono-Medium.woff';
-import SFMonoMediumWOFF2 from '../fonts/SFMono/SFMono-Medium.woff2';
-import SFMonoMediumItalicTTF from '../fonts/SFMono/SFMono-MediumItalic.ttf';
-import SFMonoMediumItalicWOFF from '../fonts/SFMono/SFMono-MediumItalic.woff';
-import SFMonoMediumItalicWOFF2 from '../fonts/SFMono/SFMono-MediumItalic.woff2';
-import SFMonoSemiboldTTF from '../fonts/SFMono/SFMono-Semibold.ttf';
-import SFMonoSemiboldWOFF from '../fonts/SFMono/SFMono-Semibold.woff';
-import SFMonoSemiboldWOFF2 from '../fonts/SFMono/SFMono-Semibold.woff2';
-import SFMonoSemiboldItalicTTF from '../fonts/SFMono/SFMono-SemiboldItalic.ttf';
-import SFMonoSemiboldItalicWOFF from '../fonts/SFMono/SFMono-SemiboldItalic.woff';
-import SFMonoSemiboldItalicWOFF2 from '../fonts/SFMono/SFMono-SemiboldItalic.woff2';
+import SFMonoRegularTTF from '../fonts/sfmono/SFMono-Regular.ttf';
+import SFMonoRegularWOFF from '../fonts/sfmono/SFMono-Regular.woff';
+import SFMonoRegularWOFF2 from '../fonts/sfmono/SFMono-Regular.woff2';
+import SFMonoRegularItalicTTF from '../fonts/sfmono/SFMono-RegularItalic.ttf';
+import SFMonoRegularItalicWOFF from '../fonts/sfmono/SFMono-RegularItalic.woff';
+import SFMonoRegularItalicWOFF2 from '../fonts/sfmono/SFMono-RegularItalic.woff2';
+import SFMonoMediumTTF from '../fonts/sfmono/SFMono-Medium.ttf';
+import SFMonoMediumWOFF from '../fonts/sfmono/SFMono-Medium.woff';
+import SFMonoMediumWOFF2 from '../fonts/sfmono/SFMono-Medium.woff2';
+import SFMonoMediumItalicTTF from '../fonts/sfmono/SFMono-MediumItalic.ttf';
+import SFMonoMediumItalicWOFF from '../fonts/sfmono/SFMono-MediumItalic.woff';
+import SFMonoMediumItalicWOFF2 from '../fonts/sfmono/SFMono-MediumItalic.woff2';
+import SFMonoSemiboldTTF from '../fonts/sfmono/SFMono-Semibold.ttf';
+import SFMonoSemiboldWOFF from '../fonts/sfmono/SFMono-Semibold.woff';
+import SFMonoSemiboldWOFF2 from '../fonts/sfmono/SFMono-Semibold.woff2';
+import SFMonoSemiboldItalicTTF from '../fonts/sfmono/SFMono-SemiboldItalic.ttf';
+import SFMonoSemiboldItalicWOFF from '../fonts/sfmono/SFMono-SemiboldItalic.woff';
+import SFMonoSemiboldItalicWOFF2 from '../fonts/sfmono/SFMono-SemiboldItalic.woff2';
 
-import MontserratLightTTF from '../fonts/Montserrat/Montserrat-Light.ttf';
-import MontserratLightWOFF from '../fonts/Montserrat/Montserrat-Light.woff';
-import MontserratLightWOFF2 from '../fonts/Montserrat/Montserrat-Light.woff2';
-import MontserratRegularTTF from '../fonts/Montserrat/Montserrat-Regular.ttf';
-import MontserratRegularWOFF from '../fonts/Montserrat/Montserrat-Regular.woff';
-import MontserratRegularWOFF2 from '../fonts/Montserrat/Montserrat-Regular.woff2';
-import MontserratLightItalicTTF from '../fonts/Montserrat/Montserrat-LightItalic.ttf';
-import MontserratLightItalicWOFF from '../fonts/Montserrat/Montserrat-LightItalic.woff';
-import MontserratLightItalicWOFF2 from '../fonts/Montserrat/Montserrat-LightItalic.woff2';
-import MontserratMediumTTF from '../fonts/Montserrat/Montserrat-Medium.ttf';
-import MontserratMediumWOFF from '../fonts/Montserrat/Montserrat-Medium.woff';
-import MontserratMediumWOFF2 from '../fonts/Montserrat/Montserrat-Medium.woff2';
-import MontserratMediumItalicTTF from '../fonts/Montserrat/Montserrat-MediumItalic.ttf';
-import MontserratMediumItalicWOFF from '../fonts/Montserrat/Montserrat-MediumItalic.woff';
-import MontserratMediumItalicWOFF2 from '../fonts/Montserrat/Montserrat-MediumItalic.woff2';
-import MontserratSemiboldTTF from '../fonts/Montserrat/Montserrat-Semibold.ttf';
-import MontserratSemiboldWOFF from '../fonts/Montserrat/Montserrat-Semibold.woff';
-import MontserratSemiboldWOFF2 from '../fonts/Montserrat/Montserrat-Semibold.woff2';
-import MontserratSemiboldItalicTTF from '../fonts/Montserrat/Montserrat-SemiboldItalic.ttf';
-import MontserratSemiboldItalicWOFF from '../fonts/Montserrat/Montserrat-SemiboldItalic.woff';
-import MontserratSemiboldItalicWOFF2 from '../fonts/Montserrat/Montserrat-SemiboldItalic.woff2';
+import MontserratLightTTF from '../fonts/montserrat/Montserrat-Light.ttf';
+import MontserratLightWOFF from '../fonts/montserrat/Montserrat-Light.woff';
+import MontserratLightWOFF2 from '../fonts/montserrat/Montserrat-Light.woff2';
+import MontserratRegularTTF from '../fonts/montserrat/Montserrat-Regular.ttf';
+import MontserratRegularWOFF from '../fonts/montserrat/Montserrat-Regular.woff';
+import MontserratRegularWOFF2 from '../fonts/montserrat/Montserrat-Regular.woff2';
+import MontserratLightItalicTTF from '../fonts/montserrat/Montserrat-LightItalic.ttf';
+import MontserratLightItalicWOFF from '../fonts/montserrat/Montserrat-LightItalic.woff';
+import MontserratLightItalicWOFF2 from '../fonts/montserrat/Montserrat-LightItalic.woff2';
+import MontserratMediumTTF from '../fonts/montserrat/Montserrat-Medium.ttf';
+import MontserratMediumWOFF from '../fonts/montserrat/Montserrat-Medium.woff';
+import MontserratMediumWOFF2 from '../fonts/montserrat/Montserrat-Medium.woff2';
+import MontserratMediumItalicTTF from '../fonts/montserrat/Montserrat-MediumItalic.ttf';
+import MontserratMediumItalicWOFF from '../fonts/montserrat/Montserrat-MediumItalic.woff';
+import MontserratMediumItalicWOFF2 from '../fonts/montserrat/Montserrat-MediumItalic.woff2';
+import MontserratSemiboldTTF from '../fonts/montserrat/Montserrat-Semibold.ttf';
+import MontserratSemiboldWOFF from '../fonts/montserrat/Montserrat-Semibold.woff';
+import MontserratSemiboldWOFF2 from '../fonts/montserrat/Montserrat-Semibold.woff2';
+import MontserratSemiboldItalicTTF from '../fonts/montserrat/Montserrat-SemiboldItalic.ttf';
+import MontserratSemiboldItalicWOFF from '../fonts/montserrat/Montserrat-SemiboldItalic.woff';
+import MontserratSemiboldItalicWOFF2 from '../fonts/montserrat/Montserrat-SemiboldItalic.woff2';
 
-import OpenSansRegularTTF from '../fonts/OpenSans/OpenSans-Regular.ttf';
-import OpenSansRegularWOFF from '../fonts/OpenSans/OpenSans-Regular.woff';
-import OpenSansRegularWOFF2 from '../fonts/OpenSans/OpenSans-Regular.woff2';
-import OpenSansLightItalicTTF from '../fonts/OpenSans/OpenSans-LightItalic.ttf';
-import OpenSansLightItalicWOFF from '../fonts/OpenSans/OpenSans-LightItalic.woff';
-import OpenSansLightItalicWOFF2 from '../fonts/OpenSans/OpenSans-LightItalic.woff2';
-import OpenSansLightTTF from '../fonts/OpenSans/OpenSans-Light.ttf';
-import OpenSansLightWOFF from '../fonts/OpenSans/OpenSans-Light.woff';
-import OpenSansLightWOFF2 from '../fonts/OpenSans/OpenSans-Light.woff2';
-//import OpenSansMediumItalicTTF from '../fonts/OpenSans/OpenSans-MediumItalic.ttf';
-//import OpenSansMediumItalicWOFF from '../fonts/OpenSans/OpenSans-MediumItalic.woff';
-//import OpenSansMediumItalicWOFF2 from '../fonts/OpenSans/OpenSans-MediumItalic.woff2';
-import OpenSansSemiboldTTF from '../fonts/OpenSans/OpenSans-Semibold.ttf';
-import OpenSansSemiboldWOFF from '../fonts/OpenSans/OpenSans-Semibold.woff';
-import OpenSansSemiboldWOFF2 from '../fonts/OpenSans/OpenSans-Semibold.woff2';
-import OpenSansSemiboldItalicTTF from '../fonts/OpenSans/OpenSans-SemiboldItalic.ttf';
-import OpenSansSemiboldItalicWOFF from '../fonts/OpenSans/OpenSans-SemiboldItalic.woff';
-import OpenSansSemiboldItalicWOFF2 from '../fonts/OpenSans/OpenSans-SemiboldItalic.woff2';
+import OpenSansRegularTTF from '../fonts/opensans/OpenSans-Regular.ttf';
+import OpenSansRegularWOFF from '../fonts/opensans/OpenSans-Regular.woff';
+import OpenSansRegularWOFF2 from '../fonts/opensans/OpenSans-Regular.woff2';
+import OpenSansLightItalicTTF from '../fonts/opensans/OpenSans-LightItalic.ttf';
+import OpenSansLightItalicWOFF from '../fonts/opensans/OpenSans-LightItalic.woff';
+import OpenSansLightItalicWOFF2 from '../fonts/opensans/OpenSans-LightItalic.woff2';
+import OpenSansLightTTF from '../fonts/opensans/OpenSans-Light.ttf';
+import OpenSansLightWOFF from '../fonts/opensans/OpenSans-Light.woff';
+import OpenSansLightWOFF2 from '../fonts/opensans/OpenSans-Light.woff2';
+//import OpenSansMediumItalicTTF from '../fonts/opensans/OpenSans-MediumItalic.ttf';
+//import OpenSansMediumItalicWOFF from '../fonts/opensans/OpenSans-MediumItalic.woff';
+//import OpenSansMediumItalicWOFF2 from '../fonts/opensans/OpenSans-MediumItalic.woff2';
+import OpenSansSemiboldTTF from '../fonts/opensans/OpenSans-Semibold.ttf';
+import OpenSansSemiboldWOFF from '../fonts/opensans/OpenSans-Semibold.woff';
+import OpenSansSemiboldWOFF2 from '../fonts/opensans/OpenSans-Semibold.woff2';
+import OpenSansSemiboldItalicTTF from '../fonts/opensans/OpenSans-SemiboldItalic.ttf';
+import OpenSansSemiboldItalicWOFF from '../fonts/opensans/OpenSans-SemiboldItalic.woff';
+import OpenSansSemiboldItalicWOFF2 from '../fonts/opensans/OpenSans-SemiboldItalic.woff2';
 
-
-
-import RalewayBlackTTF from '../fonts/Raleway/Raleway-Black.ttf';
-import RalewayBlackItalicTTF from '../fonts/Raleway/Raleway-BlackItalic.ttf';
-import RalewayBoldTTF from '../fonts/Raleway/Raleway-Bold.ttf';
-import RalewayBoldItalicTTF from '../fonts/Raleway/Raleway-BoldItalic.ttf';
-import RalewayExtraBoldTTF from '../fonts/Raleway/Raleway-ExtraBold.ttf';
-import RalewayExtraBoldItalicTTF from '../fonts/Raleway/Raleway-ExtraBoldItalic.ttf';
-import RalewayExtraLightTTF from '../fonts/Raleway/Raleway-ExtraLight.ttf';
-import RalewayExtraLightItalicTTF from '../fonts/Raleway/Raleway-ExtraLightItalic.ttf';
-import RalewayItalicTTF from '../fonts/Raleway/Raleway-Italic.ttf';
-import RalewayLightTTF from '../fonts/Raleway/Raleway-Light.ttf';
-import RalewayLightItalicTTF from '../fonts/Raleway/Raleway-LightItalic.ttf';
-import RalewayMediumTTF from '../fonts/Raleway/Raleway-Medium.ttf';
-import RalewayMediumItalicTTF from '../fonts/Raleway/Raleway-MediumItalic.ttf';
-import RalewayRegularTTF from '../fonts/Raleway/Raleway-Regular.ttf';
-import RalewaySemiBoldTTF from '../fonts/Raleway/Raleway-SemiBold.ttf';
-import RalewaySemiBoldItalicTTF from '../fonts/Raleway/Raleway-SemiBoldItalic.ttf';
-import RalewayThinTTF from '../fonts/Raleway/Raleway-Thin.ttf';
-import RalewayThinItalicTTF from '../fonts/Raleway/Raleway-ThinItalic.ttf';
-
-
+import RalewayBlackTTF from '../fonts/raleway/Raleway-Black.ttf';
+import RalewayBlackItalicTTF from '../fonts/raleway/Raleway-BlackItalic.ttf';
+import RalewayBoldTTF from '../fonts/raleway/Raleway-Bold.ttf';
+import RalewayBoldItalicTTF from '../fonts/raleway/Raleway-BoldItalic.ttf';
+import RalewayExtraBoldTTF from '../fonts/raleway/Raleway-ExtraBold.ttf';
+import RalewayExtraBoldItalicTTF from '../fonts/raleway/Raleway-ExtraBoldItalic.ttf';
+import RalewayExtraLightTTF from '../fonts/raleway/Raleway-ExtraLight.ttf';
+import RalewayExtraLightItalicTTF from '../fonts/raleway/Raleway-ExtraLightItalic.ttf';
+import RalewayItalicTTF from '../fonts/raleway/Raleway-Italic.ttf';
+import RalewayLightTTF from '../fonts/raleway/Raleway-Light.ttf';
+import RalewayLightItalicTTF from '../fonts/raleway/Raleway-LightItalic.ttf';
+import RalewayMediumTTF from '../fonts/raleway/Raleway-Medium.ttf';
+import RalewayMediumItalicTTF from '../fonts/raleway/Raleway-MediumItalic.ttf';
+import RalewayRegularTTF from '../fonts/raleway/Raleway-Regular.ttf';
+import RalewaySemiBoldTTF from '../fonts/raleway/Raleway-SemiBold.ttf';
+import RalewaySemiBoldItalicTTF from '../fonts/raleway/Raleway-SemiBoldItalic.ttf';
+import RalewayThinTTF from '../fonts/raleway/Raleway-Thin.ttf';
+import RalewayThinItalicTTF from '../fonts/raleway/Raleway-ThinItalic.ttf';
 
 export {
   CalibreLightTTF,
@@ -179,7 +175,7 @@ export {
   OpenSansLightTTF,
   OpenSansLightWOFF,
   OpenSansLightWOFF2,
- //OpenSansMediumItalicTTF,
+  //OpenSansMediumItalicTTF,
   //OpenSansMediumItalicWOFF,
   //OpenSansMediumItalicWOFF2,
   OpenSansSemiboldTTF,
@@ -188,23 +184,22 @@ export {
   OpenSansSemiboldItalicTTF,
   OpenSansSemiboldItalicWOFF,
   OpenSansSemiboldItalicWOFF2,
-
-   RalewayBlackTTF,
- RalewayBlackItalicTTF ,
- RalewayBoldTTF ,
- RalewayBoldItalicTTF ,
- RalewayExtraBoldTTF ,
- RalewayExtraBoldItalicTTF ,
- RalewayExtraLightTTF ,
- RalewayExtraLightItalicTTF ,
- RalewayItalicTTF ,
- RalewayLightTTF ,
- RalewayLightItalicTTF,
- RalewayMediumTTF,
- RalewayMediumItalicTTF,
- RalewayRegularTTF ,
- RalewaySemiBoldTTF ,
- RalewaySemiBoldItalicTTF ,
- RalewayThinTTF ,
- RalewayThinItalicTTF
+  RalewayBlackTTF,
+  RalewayBlackItalicTTF,
+  RalewayBoldTTF,
+  RalewayBoldItalicTTF,
+  RalewayExtraBoldTTF,
+  RalewayExtraBoldItalicTTF,
+  RalewayExtraLightTTF,
+  RalewayExtraLightItalicTTF,
+  RalewayItalicTTF,
+  RalewayLightTTF,
+  RalewayLightItalicTTF,
+  RalewayMediumTTF,
+  RalewayMediumItalicTTF,
+  RalewayRegularTTF,
+  RalewaySemiBoldTTF,
+  RalewaySemiBoldItalicTTF,
+  RalewayThinTTF,
+  RalewayThinItalicTTF,
 };
